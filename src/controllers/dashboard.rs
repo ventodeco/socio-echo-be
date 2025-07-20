@@ -1,10 +1,7 @@
-use actix_web::{get, web, HttpRequest, HttpResponse};
+use actix_web::{get, HttpRequest, HttpResponse};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-use elasticsearch::{Elasticsearch, http::transport::Transport, SearchParts};
-use serde_json::json;
 use crate::utils::validate_token;
-use elasticsearch::auth::Credentials;
 
 #[derive(Debug, Serialize)]
 pub struct DashboardCityCountResponse {
